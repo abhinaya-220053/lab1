@@ -32,6 +32,7 @@
         <img  src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.06 PM.jpeg" alt="rapido logo" width="150" height="100">
         </div>
         <br/>
+        <form action="/test.php" target="_blank">
         <label  for="name">Enter your name:</label>
         <input type="text" id="name" name="name">
         <br/>
@@ -44,6 +45,24 @@
         <input type="text" id="name" name="name" >
         <br/>
         <br/>
+        <label for="file-select">upload your drop location:</label>
+        <input type="file" name="upload " id="file-select">
+            <br/>
+            <br/>
+            <label for="address">Enter your address:</label>
+            <textarea rows="5" cols="30" name="address" id="address" ></textarea>
+            <br/>
+            <br/>
+            <label for="city">Nearest city:</label>
+            <select name="city" id="city">
+                <option value="avanigadda">avanigadda</option>
+                <option value="repalli">repalli</option>
+                <option value="nagayalanka">nagayalanka</option>
+                <option value="machalipatanam">machalipatanam<option>
+            </select>
+            <br/>
+            <br/>
+            <label>Enter your email address:<input type="email" name="email"></label>
         <h2>click here to travel on which vechicle:</h2>
         <div class="sidebyside">
              
@@ -61,9 +80,9 @@
         <div class="sidebyside">
              
             <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.13 PM.jpeg" alt="ride.PNG" width="100" height="70">
-            <input type="radio">
+            <input type="checkbox">
             <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.14 PM.jpeg" alt="parcel.PNG" width="100" height="70">
-            <input type="radio">
+            <input type="checkbox">
         </div>
         <br/>
         <br/>
@@ -71,5 +90,6 @@
         <div style="text-align:center">
         <button  type="submit">Submit</button>
         </div>
+        </form>
         </body>
     </body>
