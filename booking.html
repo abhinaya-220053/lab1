@@ -32,7 +32,8 @@
         <img  src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.06 PM.jpeg" alt="rapido logo" width="150" height="100">
         </div>
         <br/>
-        <form action="/test.php" target="_blank">
+        <!--
+        <form action="booking.php" method="POST">
         <label  for="name">Enter your name:</label>
         <input type="text" id="name" name="name">
         <br/>
@@ -46,7 +47,7 @@
         <br/>
         <br/>
         <label for="file-select">upload your drop location:</label>
-        <input type="file" name="upload " id="file-select">
+        <input type="file" name="file-select" id="file-select">
             <br/>
             <br/>
             <label for="address">Enter your address:</label>
@@ -62,24 +63,24 @@
             </select>
             <br/>
             <br/>
-            <label>Enter your email address:<input type="email" name="email"></label>
+            <label for="email">Enter your email address:<input type="email"  id="email" name="email"></label>
         <h2>click here to travel on which vechicle:</h2>
         <div class="sidebyside">
              
             <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.09 PM.jpeg" alt="auto.PNG" width="100" height="70">
-            <input type="radio">
+            <input name="img1" type="radio">
             <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.11 PM (1).jpeg" alt="BICYCLE.PNG" width="100" height="70">
-            <input type="radio">
+            <input name="img2" type="radio">
             <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.11 PM.jpeg" alt="CAB.PNG" width="100" height="70">
-            <input type="radio">
+            <input name="img3" type="radio">
             <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.08 PM.jpeg" alt="BIKE.PNG" width="100" height="70">
-            <input type="radio">
+            <input name="img4" type="radio">
         </div> 
         
         <h2>click here whether to travel or sending a parcel:</h2>
         <div class="sidebyside">
              
-            <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.13 PM.jpeg" alt="ride.PNG" width="100" height="70">
+             <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.13 PM.jpeg" alt="ride.PNG" width="100" height="70">
             <input type="checkbox">
             <img src="c:\Users\Poornima\Downloads\WhatsApp Image 2025-12-17 at 3.38.14 PM.jpeg" alt="parcel.PNG" width="100" height="70">
             <input type="checkbox">
@@ -88,8 +89,51 @@
         <br/>
         <br/>
         <div style="text-align:center">
-        <button  type="submit">Submit</button>
+        <button  name="submit" type="submit">Submit</button>
         </div>
-        </form>
+        </form>-->
+        <form action="booking.php" method="POST" enctype="multipart/form-data">
+
+<label>Name:</label>
+<input type="text" name="username"><br><br>
+
+<label>Pickup Location:</label>
+<input type="text" name="pickuplocation"><br><br>
+
+<label>Drop Location:</label>
+<input type="text" name="dropofflocation"><br><br>
+
+<label>Upload Drop Location:</label>
+<input type="file" name="locationfile"><br><br>
+
+<label>Address:</label>
+<textarea name="address"></textarea><br><br>
+
+<label>Nearest city:</label>
+<select name="selecte_near_city">
+    <option value="avanigadda">avanigadda</option>
+    <option value="repalli">repalli</option>
+    <option value="nagayalanka">nagayalanka</option>
+    <option value="machalipatanam">machalipatanam</option>
+</select><br><br>
+
+<label>Email:</label>
+<input type="email" name="email"><br><br>
+
+<h2>Vehicle type:</h2>
+<input type="radio" name="vechicle_type" value="auto"> Auto
+<input type="radio" name="vechicle_type" value="bicycle"> Bicycle
+<input type="radio" name="vechicle_type" value="cab"> Cab
+<input type="radio" name="vechicle_type" value="bike"> Bike
+
+<h2>Service:</h2>
+<input type="radio" name="traver_or_parcel" value="travel"> Travel
+<input type="radio" name="traver_or_parcel" value="parcel"> Parcel
+
+<br><br>
+<button type="submit" name="submit">Submit</button>
+
+</form>
+
         </body>
     </body>
