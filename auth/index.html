@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Login</title>
+</head>
+<body>
+
+  <h2>Login Page</h2>
+  <input type="email" id="email" placeholder="Enter Email"><br><br>
+  <input type="password" id="password" placeholder="Enter Password"><br><br>
+  <button id="loginBtn">Login</button>
+
+  <p id="message"></p>
+
+  <script type="module">
+    // Import Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
+
+    // Your Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDumvbmQtP7LZoxszwFZFgCjSj1a4_LCYs",
+      authDomain: "rapido-fff33.firebaseapp.com",
+      projectId: "rapido-fff33",
+      storageBucket: "rapido-fff33.firebasestorage.app",
+      messagingSenderId: "274141935061",
+      appId: "1:274141935061:web:68d09c993dbf226522395c"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Login button click event
+    document.getElementById("loginBtn").addEventListener("click", function() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          document.getElementById("message").innerHTML = "Login Successful!";
+          console.log(userCredential.user);
+        })
+        .catch((error) => {
+          document.getElementById("message").innerHTML = "wrong" + error.message;
+        });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+<!--
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDumvbmQtP7LZoxszwFZFgCjSj1a4_LCYs",
+    authDomain: "rapido-fff33.firebaseapp.com",
+    projectId: "rapido-fff33",
+    storageBucket: "rapido-fff33.firebasestorage.app",
+    messagingSenderId: "274141935061",
+    appId: "1:274141935061:web:68d09c993dbf226522395c"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+-->

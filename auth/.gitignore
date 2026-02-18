@@ -1,0 +1,4 @@
+.env      
+#→ Do not upload environment file
+vendor/  
+# → Do not upload composer libraries

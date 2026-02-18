@@ -44,7 +44,7 @@ if (file_exists($name)) {
 
 //file information
 echo "<h3>file information:</h3>";
-echo "File Exists: " . (file_exists($name) ? "Yes" : "No") . "<br>";
+echo "File Exists: " , (file_exists($name) ? "Yes" : "No") , "<br>";
 echo "File Size: " . filesize($name) . " bytes<br>";
 echo "File Type: " . filetype($name) . "<br>";
 echo "Last Access: " . date("Y-m-d H:i:s", fileatime($name)) . "<br>";

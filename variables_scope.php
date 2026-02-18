@@ -34,6 +34,9 @@ echo "2.global scope <br>";
 $var2="hello"; //global variable
 function gsexample(){
     global $var2; 
+    global $var399999;
+    $var399999="990";
+    echo "----------------------------------".$var399999;
     $var2 =" it is a global variable ".$var2;
     echo $var2."<br>";
 }
